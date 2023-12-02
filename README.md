@@ -1,3 +1,3 @@
 # assembly-projects
 
-Projects witten in Assembly
+Projects witten in VHDL
