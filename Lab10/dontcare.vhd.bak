@@ -1,0 +1,42 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity dontcare is
+
+PORT(
+clock : in std_logic;
+D: in std_logic;
+Q: out std_logic;
+Qnot: out std_logic
+);
+
+end dontcare;
+
+architecture behaviour of dontcare is
+signal clock_tmp: std_logic;
+
+component slow_clock is
+	PORT(
+	clock_in: in std_logic
+	);
+end component;
+
+component D_Flip_Flop is
+	PORT(
+	clock: in std_logic;
+	X: in std_logic;
+	Y1: inout std_logic;
+	Y2: inout std_logic;
+	Z: out std_logic
+	);
+end component;
+
+begin
+
+D(1) <= ((Y2 and Y1) or Y2 and not Y1));
+D(2) <= (not Y2 and not Y1)
+
+inst1: slow_clock port map(clock,clock_tmp);
+inst2: D_Flip_Flop port map(clock_tmp,X,Y1,Y2,Z);
+
+end behaviour;	

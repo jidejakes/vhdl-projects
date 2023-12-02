@@ -1,0 +1,39 @@
+-- Multiplexer
+-- lab 6
+
+library IEEE; use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity Mux IS
+
+port ( 
+x: in STD_LOGIC_Vector(1 downto 0);
+a: in STD_LOGIC;
+b: in STD_LOGIC;
+c: in STD_LOGIC;
+d: in STD_LOGIC;
+y: out STD_LOGIC
+
+);
+end Mux;
+
+architecture behavior of Mux is
+
+begin
+ 
+P1: process(x)
+
+begin
+if x="00" then 
+y<=a;
+elsif x="01" then
+y<=b;
+elsif x="10" then 
+y<=c;
+elsif x="11" then
+y<=d; 
+else y<=a;
+end if;
+end process P1;
+end behavior;
+

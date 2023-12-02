@@ -1,0 +1,94 @@
+part 1
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity slow_clock is
+
+PORT(
+	clock_in : in std_logic;
+	clock_out : out std_logic
+);
+
+end slow_clock;
+
+architecture behavior of slow_clock is
+signal clock_tmp : std_logic;
+
+begin
+	process(clock_in)
+	variable x : integer := 0;
+	begin
+		if(clock_in'event and clock_in='1') then
+			x:=x+1;
+			if x = 50000000 then
+				x:=0;
+				clock_tmp <= not clock_tmp;
+				clock_out <= clock_tmp;
+			end if;
+		end if;
+	end process;
+end behavior;
+
+part 2
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity flipflop is
+
+PORT(
+	clock : in std_logic;
+	d     : in std_logic;
+	q        : out std_logic;
+	qn       : out std_logic
+);
+end flipflop;
+
+architecture behavior of flipflop is
+
+begin
+	process(clock)
+	begin
+		if(clock'event and clock='1') then
+			q         <= d_in;
+			qn        <= not d;
+		end if;
+	end process;
+end behavior;
+
+part 3
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity slowff is
+
+PORT(
+	clock_in : in std_logic;
+	d_in     : in std_logic;
+	q        : out std_logic;
+	qn       : out std_logic
+);
+
+end slowff;
+
+architecture behavior of slowff is
+signal clock_tmp : std_logic;
+signal clock_out : std_logic;
+
+begin
+	process(clock_in)
+	variable x : integer := 0;
+	begin
+		if(clock_in'event and clock_in='1') then
+			x:=x+1;
+			if x = 50000000 then
+				x:=0;
+				clock_tmp <= not clock_tmp;
+				clock_out <= clock_tmp;
+				if (clock_out='1') then
+					q  <= d_in;
+					qn <= not d_in;
+				end if;
+			end if;
+		end if;
+	end process;
+end behavior;

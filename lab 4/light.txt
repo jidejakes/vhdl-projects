@@ -1,0 +1,55 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+--Two way light controller
+ENTITY light is
+
+PORT (
+	X1	:	IN STD_LOGIC;
+	X2	:	IN STD_LOGIC;
+	F	:	Out STD_LOGIC
+);
+
+END light;
+
+ARCHITECTURE Behavior OF light IS
+
+BEGIN
+
+F	<= (not X2 and X1) or (not X1 and X2);
+
+END behavior ; 
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+ENTITY light IS
+
+PORT (
+	X1 : IN STD_LOGIC;
+	X2 : IN STD_LOGIC;
+	X3 : IN STD_LOGIC;
+	Y1 : IN STD_LOGIC;
+	Y2 : IN STD_LOGIC;
+	Y3 : IN STD_LOGIC;
+	F1 : OUT STD_LOGIC;
+	F2 : OUT STD_LOGIC;
+	F3 : OUT STD_LOGIC;
+	F4 : OUT STD_LOGIC
+	
+);
+
+END light;
+
+ARCHITECTURE Behavior OF light IS
+
+SIGNAL C1 : STD_LOGIC;
+SIGNAL C2 : STD_LOGIC;
+
+BEGIN
+F1 <= (X1 xor Y1);
+C1 <= (X1 and Y1);
+F2 <= (X2 xor Y2) xor C1;
+C2 <= ((X2 xor Y2) and C1) or (X2 and Y2);
+F3 <= (X3 xor Y3) xor C2;
+F4 <= ((X3 xor Y3) and C2) or (X3 and Y3);
+
+END Behavior;

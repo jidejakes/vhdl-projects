@@ -1,0 +1,139 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY light IS
+
+PORT (
+X1 : IN STD_LOGIC;
+Y1 : IN STD_LOGIC;
+C0 : IN STD_LOGIC;
+Z1 : OUT STD_LOGIC;
+Z2 : OUT STD_LOGIC
+);
+
+END light;
+
+ARCHITECTURE Behavior OF light IS
+
+
+BEGIN
+
+Z1 <= C0 xor (X1 xor Y1);
+Z2 <= ((X1 xor Y1) and C0) or (X1 and Y1);
+
+END Behavior;
+
+
+
+
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY light2 IS
+
+PORT (
+X1 : IN STD_LOGIC_VECTOR(3 downto 0);
+Y1 : IN STD_LOGIC_VECTOR(3 downto 0);
+Z1 : OUT STD_LOGIC_VECTOR(4 downto 0)
+);
+
+END light2;
+
+ARCHITECTURE Behavior OF light2 IS
+
+signal Z2 : STD_LOGIC_VECTOR (2 downto 0);
+
+component light
+
+PORT (
+X1 : IN STD_LOGIC;
+Y1 : IN STD_LOGIC;
+C0 : IN STD_LOGIC;
+Z1 : OUT STD_LOGIC;
+Z2 : OUT STD_LOGIC
+);
+end component;
+
+
+BEGIN
+
+adder1 : light port map(X1(0), Y1(0), '0', Z1(0), Z2(0));
+adder2 : light port map(X1(1), Y1(1), Z2(0), Z1(1), Z2(1));
+adder3 : light port map(X1(2), Y1(2), Z2(1), Z1(2), Z2(2));
+adder4 : light port map(X1(3), Y1(3), Z2(2), Z1(3), Z1(4));
+
+END Behavior; 
+
+
+
+
+
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+LIBRARY lpm;
+USE lpm.all;
+
+ENTITY cmp IS
+	PORT
+	(
+		dataa		: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+		datab		: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+		AeB		: OUT STD_LOGIC ;
+		AgB		: OUT STD_LOGIC ;
+		AlB		: OUT STD_LOGIC 
+	);
+END cmp;
+
+
+ARCHITECTURE SYN OF cmp IS
+
+	SIGNAL sub_wire0	: STD_LOGIC ;
+	SIGNAL sub_wire1	: STD_LOGIC ;
+	SIGNAL sub_wire2	: STD_LOGIC ;
+
+
+
+	COMPONENT lpm_compare
+	GENERIC (
+		lpm_representation		: STRING;
+		lpm_type		: STRING;
+		lpm_width		: NATURAL
+	);
+	PORT (
+			dataa	: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+			datab	: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+			AlB	: OUT STD_LOGIC ;
+			AgB	: OUT STD_LOGIC ;
+			AeB	: OUT STD_LOGIC 
+	);
+	END COMPONENT;
+
+BEGIN
+	AlB    <= sub_wire0;
+	AgB    <= sub_wire1;
+	AeB    <= sub_wire2;
+
+	lpm_compare_component : lpm_compare
+	GENERIC MAP (
+		lpm_representation => "UNSIGNED",
+		lpm_type => "LPM_COMPARE",
+		lpm_width => 4
+	)
+	PORT MAP (
+		dataa => dataa,
+		datab => datab,
+		AlB => sub_wire0,
+		AgB => sub_wire1,
+		AeB => sub_wire2
+	);
+
+
+
+END SYN;
+
+
