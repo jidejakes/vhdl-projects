@@ -1,0 +1,1103 @@
+TimeQuest Timing Analyzer report for lab10
+Wed Oct 30 20:43:03 2013
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'Y1'
+ 12. Slow Model Hold: 'Y1'
+ 13. Slow Model Minimum Pulse Width: 'Y1'
+ 14. Slow Model Minimum Pulse Width: 'Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 'Y1'
+ 25. Fast Model Hold: 'Y1'
+ 26. Fast Model Minimum Pulse Width: 'Y1'
+ 27. Fast Model Minimum Pulse Width: 'Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Multicorner Timing Analysis Summary
+ 33. Setup Times
+ 34. Hold Times
+ 35. Clock to Output Times
+ 36. Minimum Clock to Output Times
+ 37. Setup Transfers
+ 38. Hold Transfers
+ 39. Report TCCS
+ 40. Report RSKM
+ 41. Unconstrained Paths
+ 42. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; lab10                                                             ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                           ;
++-------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------------+
+; Clock Name                                      ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                             ;
++-------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------------+
+; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out } ;
+; Y1                                              ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Y1 }                                              ;
++-------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 169.18 MHz ; 169.18 MHz      ; Y1         ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; Y1    ; -4.911 ; -94.902       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; Y1    ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++--------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                                   ;
++-------------------------------------------------+--------+---------------+
+; Clock                                           ; Slack  ; End Point TNS ;
++-------------------------------------------------+--------+---------------+
+; Y1                                              ; -1.777 ; -35.777       ;
+; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; -0.500 ; -1.000        ;
++-------------------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Y1'                                                                                                                                                       ;
++--------+---------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.911 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.940      ;
+; -4.911 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.940      ;
+; -4.850 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.879      ;
+; -4.850 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.879      ;
+; -4.822 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.858      ;
+; -4.822 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.858      ;
+; -4.775 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.804      ;
+; -4.775 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.804      ;
+; -4.744 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.773      ;
+; -4.744 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.773      ;
+; -4.734 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.763      ;
+; -4.734 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.763      ;
+; -4.730 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.759      ;
+; -4.729 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.758      ;
+; -4.729 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.758      ;
+; -4.727 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.756      ;
+; -4.673 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.702      ;
+; -4.673 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.702      ;
+; -4.669 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.698      ;
+; -4.668 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.697      ;
+; -4.668 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.697      ;
+; -4.666 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.695      ;
+; -4.645 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.681      ;
+; -4.645 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.681      ;
+; -4.641 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.677      ;
+; -4.640 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.676      ;
+; -4.640 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.676      ;
+; -4.638 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.674      ;
+; -4.634 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.663      ;
+; -4.634 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.663      ;
+; -4.618 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.647      ;
+; -4.618 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.647      ;
+; -4.618 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.647      ;
+; -4.616 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.645      ;
+; -4.603 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.632      ;
+; -4.603 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.632      ;
+; -4.598 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.627      ;
+; -4.598 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.627      ;
+; -4.594 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.623      ;
+; -4.593 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.622      ;
+; -4.593 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.622      ;
+; -4.591 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.620      ;
+; -4.567 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.596      ;
+; -4.567 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.596      ;
+; -4.563 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.592      ;
+; -4.562 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.591      ;
+; -4.562 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.591      ;
+; -4.560 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.589      ;
+; -4.557 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.586      ;
+; -4.557 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.586      ;
+; -4.557 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.586      ;
+; -4.555 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.584      ;
+; -4.532 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.561      ;
+; -4.532 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.561      ;
+; -4.529 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.565      ;
+; -4.529 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.565      ;
+; -4.529 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.565      ;
+; -4.527 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.563      ;
+; -4.503 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.532      ;
+; -4.499 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[15]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.528      ;
+; -4.482 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.511      ;
+; -4.482 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.511      ;
+; -4.482 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.511      ;
+; -4.480 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.509      ;
+; -4.462 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12] ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.498      ;
+; -4.462 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12] ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.498      ;
+; -4.457 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.486      ;
+; -4.457 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.486      ;
+; -4.453 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.482      ;
+; -4.452 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.481      ;
+; -4.452 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.481      ;
+; -4.451 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.480      ;
+; -4.451 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.480      ;
+; -4.451 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.480      ;
+; -4.450 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.479      ;
+; -4.449 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.478      ;
+; -4.442 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.471      ;
+; -4.438 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[15]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.467      ;
+; -4.426 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.455      ;
+; -4.426 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.455      ;
+; -4.422 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.451      ;
+; -4.421 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.450      ;
+; -4.421 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.450      ;
+; -4.419 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.448      ;
+; -4.414 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.450      ;
+; -4.410 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[15]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.446      ;
+; -4.399 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13] ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.435      ;
+; -4.399 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13] ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; 0.000      ; 5.435      ;
+; -4.367 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.396      ;
+; -4.363 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[15]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.392      ;
+; -4.355 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.384      ;
+; -4.355 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.384      ;
+; -4.351 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.380      ;
+; -4.350 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.379      ;
+; -4.350 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.379      ;
+; -4.348 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.377      ;
+; -4.341 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.370      ;
+; -4.341 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.370      ;
+; -4.341 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.370      ;
+; -4.339 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 5.368      ;
++--------+---------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Y1'                                                                                                                                                           ;
++-------+-------------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                       ; To Node                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.657      ;
+; 0.524 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.790      ;
+; 0.666 ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.932      ;
+; 0.788 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.054      ;
+; 0.788 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.054      ;
+; 0.788 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[16]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[16]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.054      ;
+; 0.788 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[18]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[18]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.054      ;
+; 0.794 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.060      ;
+; 0.795 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.061      ;
+; 0.798 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.064      ;
+; 0.799 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.065      ;
+; 0.828 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.094      ;
+; 0.828 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.094      ;
+; 0.831 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.097      ;
+; 0.831 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.097      ;
+; 0.831 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.097      ;
+; 0.831 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.097      ;
+; 0.832 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.098      ;
+; 0.832 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.098      ;
+; 1.171 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.437      ;
+; 1.171 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.437      ;
+; 1.177 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.443      ;
+; 1.178 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.444      ;
+; 1.181 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.447      ;
+; 1.182 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.448      ;
+; 1.182 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.448      ;
+; 1.182 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.448      ;
+; 1.214 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.480      ;
+; 1.214 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.480      ;
+; 1.217 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.483      ;
+; 1.217 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.483      ;
+; 1.217 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.483      ;
+; 1.218 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.484      ;
+; 1.242 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[16]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[18]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.508      ;
+; 1.242 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.508      ;
+; 1.242 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.508      ;
+; 1.248 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.514      ;
+; 1.249 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.515      ;
+; 1.252 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.518      ;
+; 1.253 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.519      ;
+; 1.253 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.519      ;
+; 1.285 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.551      ;
+; 1.288 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.554      ;
+; 1.288 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.554      ;
+; 1.288 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.554      ;
+; 1.288 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.554      ;
+; 1.313 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.579      ;
+; 1.313 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.579      ;
+; 1.319 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.585      ;
+; 1.323 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.589      ;
+; 1.353 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Y1           ; Y1          ; 0.000        ; 0.001      ; 1.620      ;
+; 1.356 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.622      ;
+; 1.359 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.625      ;
+; 1.359 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.625      ;
+; 1.359 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.625      ;
+; 1.359 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.625      ;
+; 1.377 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.643      ;
+; 1.384 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.650      ;
+; 1.384 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.650      ;
+; 1.390 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.656      ;
+; 1.394 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.660      ;
+; 1.424 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Y1           ; Y1          ; 0.000        ; 0.001      ; 1.691      ;
+; 1.430 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.696      ;
+; 1.430 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.696      ;
+; 1.448 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.714      ;
+; 1.448 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.714      ;
+; 1.455 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.721      ;
+; 1.465 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.731      ;
+; 1.479 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.745      ;
+; 1.495 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Y1           ; Y1          ; 0.000        ; 0.001      ; 1.762      ;
+; 1.501 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.767      ;
+; 1.501 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.767      ;
+; 1.514 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ; Y1           ; Y1          ; 0.000        ; -0.001     ; 1.779      ;
+; 1.516 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ; Y1           ; Y1          ; 0.000        ; -0.001     ; 1.781      ;
+; 1.519 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ; Y1           ; Y1          ; 0.000        ; -0.001     ; 1.784      ;
+; 1.519 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.785      ;
+; 1.519 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.785      ;
+; 1.526 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.792      ;
+; 1.547 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[16]     ; Y1           ; Y1          ; 0.000        ; -0.006     ; 1.807      ;
+; 1.550 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.816      ;
+; 1.566 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Y1           ; Y1          ; 0.000        ; 0.001      ; 1.833      ;
+; 1.572 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.838      ;
+; 1.582 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[18]     ; Y1           ; Y1          ; 0.000        ; 0.001      ; 1.849      ;
+; 1.589 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.855      ;
+; 1.590 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.856      ;
+; 1.590 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.856      ;
+; 1.614 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[18]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.880      ;
+; 1.620 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.886      ;
+; 1.621 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.887      ;
+; 1.637 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Y1           ; Y1          ; 0.000        ; 0.001      ; 1.904      ;
+; 1.643 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.909      ;
+; 1.650 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[16]     ; Y1           ; Y1          ; 0.000        ; -0.006     ; 1.910      ;
+; 1.660 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.926      ;
+; 1.661 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 1.927      ;
+; 1.667 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Y1           ; Y1          ; 0.000        ; 0.007      ; 1.940      ;
+; 1.677 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Y1           ; Y1          ; 0.000        ; 0.001      ; 1.944      ;
+; 1.689 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[18]     ; Y1           ; Y1          ; 0.000        ; -0.006     ; 1.949      ;
++-------+-------------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Y1'                                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                          ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------+
+; -1.777 ; 1.000        ; 2.777          ; Port Rate        ; Y1    ; Rise       ; Y1                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[16]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[16]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[18]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[18]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; D[2]|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; D[2]|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Rise       ; D[2]|datad                                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Rise       ; D[2]|datad                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; D[2]~clkctrl|inclk[0]                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; D[2]~clkctrl|inclk[0]                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; D[2]~clkctrl|outclk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; D[2]~clkctrl|outclk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Rise       ; Y1|combout                                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Rise       ; Y1|combout                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|clock_out|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|clock_out|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|clock_tmp|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|clock_tmp|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[0]|clk                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[0]|clk                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[10]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[10]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[11]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[11]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[12]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[12]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[13]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[13]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[14]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[14]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[15]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[15]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[16]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[16]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[17]|clk                           ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out'                                                                                   ;
++--------+--------------+----------------+------------------+-------------------------------------------------+------------+------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                                           ; Clock Edge ; Target                                   ;
++--------+--------------+----------------+------------------+-------------------------------------------------+------------+------------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Rise       ; Slow_Flip_Flop:inst2|D_Flip_Flop:inst2|Q ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Rise       ; Slow_Flip_Flop:inst2|D_Flip_Flop:inst2|Q ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Rise       ; inst2|inst1|clock_out|regout             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Rise       ; inst2|inst1|clock_out|regout             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Rise       ; inst2|inst2|Q|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Rise       ; inst2|inst2|Q|clk                        ;
++--------+--------------+----------------+------------------+-------------------------------------------------+------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                                                ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; Data Port ; Clock Port                                      ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                 ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; X         ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; 2.033 ; 2.033 ; Rise       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                                                   ;
++-----------+-------------------------------------------------+--------+--------+------------+-------------------------------------------------+
+; Data Port ; Clock Port                                      ; Rise   ; Fall   ; Clock Edge ; Clock Reference                                 ;
++-----------+-------------------------------------------------+--------+--------+------------+-------------------------------------------------+
+; X         ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; -1.803 ; -1.803 ; Rise       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
++-----------+-------------------------------------------------+--------+--------+------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                                      ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; Data Port ; Clock Port                                      ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                 ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; Z         ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; 6.559 ; 6.559 ; Rise       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                              ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; Data Port ; Clock Port                                      ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                 ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; Z         ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; 6.559 ; 6.559 ; Rise       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; Y1    ; -1.845 ; -28.994       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; Y1    ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++--------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                                   ;
++-------------------------------------------------+--------+---------------+
+; Clock                                           ; Slack  ; End Point TNS ;
++-------------------------------------------------+--------+---------------+
+; Y1                                              ; -1.777 ; -35.777       ;
+; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; -0.500 ; -1.000        ;
++-------------------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Y1'                                                                                                                                                       ;
++--------+---------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.845 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.870      ;
+; -1.845 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.870      ;
+; -1.814 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.839      ;
+; -1.814 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.839      ;
+; -1.778 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.803      ;
+; -1.778 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.803      ;
+; -1.771 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.803      ;
+; -1.771 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.803      ;
+; -1.758 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.783      ;
+; -1.758 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.783      ;
+; -1.708 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.733      ;
+; -1.708 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.733      ;
+; -1.689 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.714      ;
+; -1.689 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.714      ;
+; -1.687 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.712      ;
+; -1.687 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.712      ;
+; -1.684 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.709      ;
+; -1.683 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.708      ;
+; -1.683 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.708      ;
+; -1.681 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.706      ;
+; -1.656 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.681      ;
+; -1.656 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.681      ;
+; -1.654 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.679      ;
+; -1.654 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.679      ;
+; -1.653 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.678      ;
+; -1.652 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.677      ;
+; -1.652 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.677      ;
+; -1.650 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.675      ;
+; -1.620 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.645      ;
+; -1.620 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.645      ;
+; -1.617 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.642      ;
+; -1.616 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.641      ;
+; -1.616 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.641      ;
+; -1.614 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.639      ;
+; -1.613 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.645      ;
+; -1.613 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.645      ;
+; -1.610 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.642      ;
+; -1.609 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.641      ;
+; -1.609 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.641      ;
+; -1.607 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.639      ;
+; -1.600 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.625      ;
+; -1.600 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.625      ;
+; -1.597 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.622      ;
+; -1.596 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.621      ;
+; -1.596 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.621      ;
+; -1.594 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.619      ;
+; -1.591 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.616      ;
+; -1.590 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.615      ;
+; -1.590 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.615      ;
+; -1.589 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.614      ;
+; -1.579 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.604      ;
+; -1.577 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12] ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.609      ;
+; -1.577 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12] ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.609      ;
+; -1.575 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[15]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.600      ;
+; -1.560 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.585      ;
+; -1.559 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.584      ;
+; -1.559 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.584      ;
+; -1.558 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.583      ;
+; -1.550 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.575      ;
+; -1.550 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.575      ;
+; -1.548 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.573      ;
+; -1.547 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13] ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.579      ;
+; -1.547 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13] ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.579      ;
+; -1.547 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.572      ;
+; -1.546 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.571      ;
+; -1.546 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.571      ;
+; -1.544 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.569      ;
+; -1.544 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[15]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.569      ;
+; -1.531 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.556      ;
+; -1.531 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.556      ;
+; -1.528 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.553      ;
+; -1.527 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.552      ;
+; -1.527 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.552      ;
+; -1.525 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.550      ;
+; -1.524 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.549      ;
+; -1.523 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.548      ;
+; -1.523 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.548      ;
+; -1.522 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.547      ;
+; -1.522 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.547      ;
+; -1.522 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.547      ;
+; -1.517 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.549      ;
+; -1.516 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.548      ;
+; -1.516 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.548      ;
+; -1.515 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.547      ;
+; -1.512 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.537      ;
+; -1.508 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[15]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.533      ;
+; -1.505 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.537      ;
+; -1.504 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.529      ;
+; -1.503 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.528      ;
+; -1.503 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.528      ;
+; -1.502 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.527      ;
+; -1.501 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[15]     ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.533      ;
+; -1.497 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14] ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.529      ;
+; -1.497 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14] ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 1.000        ; 0.000      ; 2.529      ;
+; -1.496 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.521      ;
+; -1.496 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.521      ;
+; -1.493 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.518      ;
+; -1.492 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.517      ;
+; -1.492 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.517      ;
+; -1.492 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]  ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Y1           ; Y1          ; 1.000        ; -0.007     ; 2.517      ;
++--------+---------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Y1'                                                                                                                                                           ;
++-------+-------------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                       ; To Node                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.393      ;
+; 0.329 ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.481      ;
+; 0.353 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.505      ;
+; 0.353 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[16]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[16]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.505      ;
+; 0.354 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.506      ;
+; 0.354 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[18]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[18]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.506      ;
+; 0.356 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.508      ;
+; 0.357 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.511      ;
+; 0.367 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.519      ;
+; 0.369 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.521      ;
+; 0.370 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.522      ;
+; 0.370 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.522      ;
+; 0.370 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.522      ;
+; 0.491 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.643      ;
+; 0.492 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.644      ;
+; 0.494 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.646      ;
+; 0.494 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.646      ;
+; 0.495 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.647      ;
+; 0.496 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.648      ;
+; 0.497 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.649      ;
+; 0.497 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.649      ;
+; 0.507 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.659      ;
+; 0.507 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.659      ;
+; 0.509 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.661      ;
+; 0.510 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.662      ;
+; 0.510 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.662      ;
+; 0.526 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[16]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[18]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.678      ;
+; 0.526 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.678      ;
+; 0.527 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.679      ;
+; 0.529 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.681      ;
+; 0.529 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.681      ;
+; 0.530 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.682      ;
+; 0.531 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.683      ;
+; 0.532 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.684      ;
+; 0.542 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.694      ;
+; 0.544 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.696      ;
+; 0.545 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.697      ;
+; 0.561 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.713      ;
+; 0.562 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.714      ;
+; 0.564 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.716      ;
+; 0.565 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.717      ;
+; 0.571 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Y1           ; Y1          ; 0.000        ; 0.001      ; 0.724      ;
+; 0.577 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.729      ;
+; 0.579 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.731      ;
+; 0.580 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.732      ;
+; 0.596 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.748      ;
+; 0.597 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.749      ;
+; 0.599 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.751      ;
+; 0.600 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.752      ;
+; 0.604 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.756      ;
+; 0.606 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ; Y1           ; Y1          ; 0.000        ; 0.001      ; 0.759      ;
+; 0.614 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.766      ;
+; 0.614 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.766      ;
+; 0.631 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.783      ;
+; 0.635 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.787      ;
+; 0.639 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.791      ;
+; 0.639 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.791      ;
+; 0.641 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ; Y1           ; Y1          ; 0.000        ; 0.001      ; 0.794      ;
+; 0.649 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.801      ;
+; 0.649 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.801      ;
+; 0.658 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.810      ;
+; 0.666 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.818      ;
+; 0.669 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ; Y1           ; Y1          ; 0.000        ; -0.001     ; 0.820      ;
+; 0.671 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ; Y1           ; Y1          ; 0.000        ; -0.001     ; 0.822      ;
+; 0.673 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[18]     ; Y1           ; Y1          ; 0.000        ; 0.001      ; 0.826      ;
+; 0.674 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ; Y1           ; Y1          ; 0.000        ; -0.001     ; 0.825      ;
+; 0.674 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.826      ;
+; 0.674 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.826      ;
+; 0.676 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ; Y1           ; Y1          ; 0.000        ; 0.001      ; 0.829      ;
+; 0.684 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.836      ;
+; 0.693 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.845      ;
+; 0.694 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[16]     ; Y1           ; Y1          ; 0.000        ; -0.006     ; 0.840      ;
+; 0.708 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.860      ;
+; 0.709 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.861      ;
+; 0.709 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.861      ;
+; 0.711 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ; Y1           ; Y1          ; 0.000        ; 0.001      ; 0.864      ;
+; 0.719 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.871      ;
+; 0.721 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Y1           ; Y1          ; 0.000        ; 0.007      ; 0.880      ;
+; 0.726 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[18]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.878      ;
+; 0.728 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.880      ;
+; 0.731 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ; Y1           ; Y1          ; 0.000        ; 0.001      ; 0.884      ;
+; 0.740 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[16]     ; Y1           ; Y1          ; 0.000        ; -0.006     ; 0.886      ;
+; 0.743 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.895      ;
+; 0.744 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ; Y1           ; Y1          ; 0.000        ; 0.000      ; 0.896      ;
+; 0.746 ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ; Y1           ; Y1          ; 0.000        ; 0.001      ; 0.899      ;
++-------+-------------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Y1'                                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                          ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------+
+; -1.777 ; 1.000        ; 2.777          ; Port Rate        ; Y1    ; Rise       ; Y1                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_tmp ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[16]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[16]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[17]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[18]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[18]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[19]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[20]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[21]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[22]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[23]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[24]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[25]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[26]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[27]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[28]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[29]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[30]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[31]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Y1    ; Fall       ; Slow_Flip_Flop:inst2|slow_clock:inst1|x[9]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; D[2]|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; D[2]|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Rise       ; D[2]|datad                                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Rise       ; D[2]|datad                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; D[2]~clkctrl|inclk[0]                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; D[2]~clkctrl|inclk[0]                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; D[2]~clkctrl|outclk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; D[2]~clkctrl|outclk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Rise       ; Y1|combout                                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Rise       ; Y1|combout                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|clock_out|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|clock_out|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|clock_tmp|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|clock_tmp|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[0]|clk                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[0]|clk                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[10]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[10]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[11]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[11]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[12]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[12]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[13]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[13]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[14]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[14]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[15]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[15]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[16]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Y1    ; Fall       ; inst2|inst1|x[16]|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Y1    ; Fall       ; inst2|inst1|x[17]|clk                           ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out'                                                                                   ;
++--------+--------------+----------------+------------------+-------------------------------------------------+------------+------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                                           ; Clock Edge ; Target                                   ;
++--------+--------------+----------------+------------------+-------------------------------------------------+------------+------------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Rise       ; Slow_Flip_Flop:inst2|D_Flip_Flop:inst2|Q ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Rise       ; Slow_Flip_Flop:inst2|D_Flip_Flop:inst2|Q ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Rise       ; inst2|inst1|clock_out|regout             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Rise       ; inst2|inst1|clock_out|regout             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Rise       ; inst2|inst2|Q|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; Rise       ; inst2|inst2|Q|clk                        ;
++--------+--------------+----------------+------------------+-------------------------------------------------+------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                                                ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; Data Port ; Clock Port                                      ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                 ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; X         ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; 0.990 ; 0.990 ; Rise       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                                                   ;
++-----------+-------------------------------------------------+--------+--------+------------+-------------------------------------------------+
+; Data Port ; Clock Port                                      ; Rise   ; Fall   ; Clock Edge ; Clock Reference                                 ;
++-----------+-------------------------------------------------+--------+--------+------------+-------------------------------------------------+
+; X         ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; -0.870 ; -0.870 ; Rise       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
++-----------+-------------------------------------------------+--------+--------+------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                                      ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; Data Port ; Clock Port                                      ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                 ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; Z         ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; 3.497 ; 3.497 ; Rise       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                              ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; Data Port ; Clock Port                                      ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                 ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; Z         ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; 3.497 ; 3.497 ; Rise       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                           ;
++--------------------------------------------------+---------+-------+----------+---------+---------------------+
+; Clock                                            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------------------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack                                 ; -4.911  ; 0.215 ; N/A      ; N/A     ; -1.777              ;
+;  Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; N/A     ; N/A   ; N/A      ; N/A     ; -0.500              ;
+;  Y1                                              ; -4.911  ; 0.215 ; N/A      ; N/A     ; -1.777              ;
+; Design-wide TNS                                  ; -94.902 ; 0.0   ; 0.0      ; 0.0     ; -36.777             ;
+;  Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; N/A     ; N/A   ; N/A      ; N/A     ; -1.000              ;
+;  Y1                                              ; -94.902 ; 0.000 ; N/A      ; N/A     ; -35.777             ;
++--------------------------------------------------+---------+-------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                                                ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; Data Port ; Clock Port                                      ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                 ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; X         ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; 2.033 ; 2.033 ; Rise       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                                                   ;
++-----------+-------------------------------------------------+--------+--------+------------+-------------------------------------------------+
+; Data Port ; Clock Port                                      ; Rise   ; Fall   ; Clock Edge ; Clock Reference                                 ;
++-----------+-------------------------------------------------+--------+--------+------------+-------------------------------------------------+
+; X         ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; -0.870 ; -0.870 ; Rise       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
++-----------+-------------------------------------------------+--------+--------+------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                                      ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; Data Port ; Clock Port                                      ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                 ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; Z         ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; 6.559 ; 6.559 ; Rise       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                              ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; Data Port ; Clock Port                                      ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                 ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+; Z         ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ; 3.497 ; 3.497 ; Rise       ; Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out ;
++-----------+-------------------------------------------------+-------+-------+------------+-------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Y1         ; Y1       ; 0        ; 0        ; 0        ; 7922     ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Y1         ; Y1       ; 0        ; 0        ; 0        ; 7922     ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 1     ; 1    ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Oct 30 20:43:02 2013
+Info: Command: quartus_sta lab10 -c lab10
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'lab10.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name Y1 Y1
+    Info (332105): create_clock -period 1.000 -name Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -4.911
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -4.911       -94.902 Y1 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 Y1 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.777
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.777       -35.777 Y1 
+    Info (332119):    -0.500        -1.000 Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.845
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.845       -28.994 Y1 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 Y1 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.777
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.777       -35.777 Y1 
+    Info (332119):    -0.500        -1.000 Slow_Flip_Flop:inst2|slow_clock:inst1|clock_out 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 391 megabytes
+    Info: Processing ended: Wed Oct 30 20:43:03 2013
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

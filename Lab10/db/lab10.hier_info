@@ -1,0 +1,114 @@
+|dontcare
+clock => Slow_Flip_Flop:inst1.clock
+X => Slow_Flip_Flop:inst2.D
+Z <= Slow_Flip_Flop:inst2.Q
+
+
+|dontcare|Slow_Flip_Flop:inst1
+clock => slow_clock:inst1.clock_in
+D => D_Flip_Flop:inst2.D
+Q <= D_Flip_Flop:inst2.Q
+Qnot <= D_Flip_Flop:inst2.Qnot
+
+
+|dontcare|Slow_Flip_Flop:inst1|slow_clock:inst1
+clock_in => clock_out~reg0.CLK
+clock_in => clock_tmp.CLK
+clock_in => x[0].CLK
+clock_in => x[1].CLK
+clock_in => x[2].CLK
+clock_in => x[3].CLK
+clock_in => x[4].CLK
+clock_in => x[5].CLK
+clock_in => x[6].CLK
+clock_in => x[7].CLK
+clock_in => x[8].CLK
+clock_in => x[9].CLK
+clock_in => x[10].CLK
+clock_in => x[11].CLK
+clock_in => x[12].CLK
+clock_in => x[13].CLK
+clock_in => x[14].CLK
+clock_in => x[15].CLK
+clock_in => x[16].CLK
+clock_in => x[17].CLK
+clock_in => x[18].CLK
+clock_in => x[19].CLK
+clock_in => x[20].CLK
+clock_in => x[21].CLK
+clock_in => x[22].CLK
+clock_in => x[23].CLK
+clock_in => x[24].CLK
+clock_in => x[25].CLK
+clock_in => x[26].CLK
+clock_in => x[27].CLK
+clock_in => x[28].CLK
+clock_in => x[29].CLK
+clock_in => x[30].CLK
+clock_in => x[31].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dontcare|Slow_Flip_Flop:inst1|D_Flip_Flop:inst2
+clock => Qnot~reg0.CLK
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => Qnot~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dontcare|Slow_Flip_Flop:inst2
+clock => slow_clock:inst1.clock_in
+D => D_Flip_Flop:inst2.D
+Q <= D_Flip_Flop:inst2.Q
+Qnot <= D_Flip_Flop:inst2.Qnot
+
+
+|dontcare|Slow_Flip_Flop:inst2|slow_clock:inst1
+clock_in => clock_out~reg0.CLK
+clock_in => clock_tmp.CLK
+clock_in => x[0].CLK
+clock_in => x[1].CLK
+clock_in => x[2].CLK
+clock_in => x[3].CLK
+clock_in => x[4].CLK
+clock_in => x[5].CLK
+clock_in => x[6].CLK
+clock_in => x[7].CLK
+clock_in => x[8].CLK
+clock_in => x[9].CLK
+clock_in => x[10].CLK
+clock_in => x[11].CLK
+clock_in => x[12].CLK
+clock_in => x[13].CLK
+clock_in => x[14].CLK
+clock_in => x[15].CLK
+clock_in => x[16].CLK
+clock_in => x[17].CLK
+clock_in => x[18].CLK
+clock_in => x[19].CLK
+clock_in => x[20].CLK
+clock_in => x[21].CLK
+clock_in => x[22].CLK
+clock_in => x[23].CLK
+clock_in => x[24].CLK
+clock_in => x[25].CLK
+clock_in => x[26].CLK
+clock_in => x[27].CLK
+clock_in => x[28].CLK
+clock_in => x[29].CLK
+clock_in => x[30].CLK
+clock_in => x[31].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dontcare|Slow_Flip_Flop:inst2|D_Flip_Flop:inst2
+clock => Qnot~reg0.CLK
+clock => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => Qnot~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

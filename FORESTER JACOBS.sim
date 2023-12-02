@@ -1,0 +1,57 @@
+%SIGNAL
+PIN  12 =  a 
+PIN  13 =  b 
+PIN  14 =  c 
+PIN  15 =  d 
+PIN  16 =  e 
+PIN  17 =  f 
+PIN  18 =  g 
+PIN   1 =  w 
+PIN   2 =  x 
+PIN   3 =  y 
+PIN   4 =  z 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+a =>
+    !w & !x & !y & z
+  # !w & x & !y & !z
+  # w & !x & y & z
+  # w & x & !y & z
+
+b =>
+    x & !z
+  # w & y & z
+
+c =>
+    !w & !x & y & !z
+  # w & x & !z
+  # w & x & y & z
+
+d =>
+    !x & !y & z
+  # !w & x & !y & !z
+  # x & y & z
+  # w & !x & y & !z
+
+e =>
+    !w & !x & z
+  # !w & x & !y
+  # !w & x & y & z
+  # w & !x & !y & z
+
+f =>
+    !w & !x & z
+  # !w & !x & y & !z
+  # !w & x & y & z
+  # w & x & !y & z
+
+g =>
+    !w & !x & !y
+  # !w & x & y & z
+  # w & x & !y & !z
+
+%END

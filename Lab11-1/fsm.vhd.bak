@@ -1,0 +1,67 @@
+LIBRARY ieee;
+USE iee.std_logic_1164.all;
+
+ENTITY fsm IS
+	PORT
+	(
+		clk: in std_logic;
+		reset: in std_logic;
+		input1, input2: in std_logic;
+		output1, output2: in std_logic;
+		state_out : out std_logic
+	);
+END fsm;
+
+ARCHITECTURE rtlof fsm is
+	TYPE state_type is (state0, state1, state2, state3);
+	SIGNAL state: state_type;
+BEGIN
+
+PROCESS(clk, reset)
+BEGIN
+
+	if reset = '1' then
+state <= state0;
+	elsif clk'EVENT AND clk = '1' then
+		CASE state is
+			when state0 =>
+				if(input1 = '0') then
+				output1 <= '0';
+				state <= state0;
+				state_out <= '00'
+				elsif(input2 = '1') then
+				output2 <= '0';
+				state <= state1;
+				state_out <= '10';
+				END if;
+				
+			when state1 =>
+				if(input1 = '1') then
+				output1 <= '0';
+				state <= state2;
+				state_out <= '10';
+				END if;
+				
+			when state2 =>
+				if(input1 = '1') then
+				output1 <= '0';
+				state <= state2;
+				state_out <= '10';
+				elsif(input2 = '0') then
+				output2 <= '0';
+				state <= state3;
+				state_out <= '00';
+				END if;
+				
+			when state3 =>
+				if(input1 = '1') then
+				output1 <= '1';
+				state <= state1;
+				state_out <= '11';
+				elsif(input2 = '0') then
+				output2 <= '0';
+				state <= state0;
+				state_out <= '00';
+				END if;
+		END CASE;
+END PROCESS;
